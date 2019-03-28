@@ -5,13 +5,13 @@ DIR='.git/hooks'
 mkdir -p $DIR
 
 GENERATE_FILENAME(){ 
-    NEW_FILENAME=`ls | grep -i $CHOICE | cut -d " " -f1`
+    NEW_FILENAME=`ls ./gitHooks | grep -i $CHOICE | cut -d " " -f1`
     echo $NEW_FILENAME
 }
 
 COPY(){
     TEMP_FILENAME=`GENERATE_FILENAME`
-    cp $TEMP_FILENAME $DIR/$TEMP_FILENAME 
+    cp ./gitHooks/$TEMP_FILENAME $DIR/$TEMP_FILENAME 
 }
 
 USER_CHOICE(){

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./gitFunctions.sh
+source ./utils/gitFunctions.sh
 
 USER_CHOICE
 EXECUTE_CHOICE
