@@ -21,7 +21,7 @@ USER_CHOICE(){
 EXECUTE_CHOICE(){
     [[ $CHOICE ]] && COPY
 }
-
+ 
 CONFIRM_EXECUTION(){
     echo "Files successfully copied to $DIR/$TEMP_FILENAME"
     ls $DIR
