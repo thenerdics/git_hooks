@@ -1,6 +1,6 @@
 #!/bin/sh
 
-exec < /dev/tty || break
+exec < /dev/tty || echo "Please use cli"
 MESSAGE=`cat .git/COMMIT_EDITMSG`
 
 function patternCheck(){
