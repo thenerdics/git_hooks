@@ -1,12 +1,12 @@
 #!/bin/sh
 
-exec < /dev/tty
+exec < /dev/tty || break
 MESSAGE=`cat .git/COMMIT_EDITMSG`
 
 function patternCheck(){
 	COMMIT_MESSAGE=$1
 	if [[ ! "$COMMIT_MESSAGE" =~ ([a-zA-Z]{2})(-[0-9]{4}) ]];then
-		echo "Commit message:$COMMIT_MESSAGE \nShould match EE-XXXX"
+		echo "Commit message:$COMMIT_MESSAGE \nShould match [A-Z]{2}-[0-9]{4}*"
 		echo "Please enter a new MESSAGE"
 		read NEW_MESSAGE
 		patternCheck "$NEW_MESSAGE"
