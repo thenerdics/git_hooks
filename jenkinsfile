@@ -1,0 +1,12 @@
+#!/usr/bin/groovy
+
+def gitRepo = sh 'git clone git@github.com:thenerdics/git_hooks.git'
+def module = shell( script:"ls")
+
+node{
+    dir('git'){
+        gitRepo
+        module
+    }
+
+}
